@@ -1,0 +1,17 @@
+header {
+  height: 650px;
+  width: 100%;
+  background-image: url("/images/black-felt.png");
+  background-size: cover;
+  background-position: center; 
+  background-color:#e09d4a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center
+}
+
+.name {
+  margin-top: -50px;
+}

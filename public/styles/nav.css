@@ -1,4 +1,5 @@
 nav {
+  position: fixed;
   height: 120px;
   width: 100%; 
   background-color: #4056A1; 
@@ -9,7 +10,7 @@ nav {
   padding: 0 1.5em; 
 }
 
-nav span.brand {
+.brand {
   font-family: "Bungee", sans-serif;
 }
 
@@ -17,11 +18,9 @@ nav span.brand {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.new-tweet span {
   font-family: "Source Sans 3", sans-serif;
 }
+
 
 .icon {
   margin-top: 5px; 
