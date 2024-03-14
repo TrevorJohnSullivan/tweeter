@@ -9,8 +9,8 @@ nav {
   padding: 0 1.5em; 
 }
 
-nav span {
-  font-family: "Bungee", sans-serif; 
+nav span.brand {
+  font-family: "Bungee", sans-serif;
 }
 
 .new-tweet {
@@ -25,5 +25,4 @@ nav span {
 
 .icon {
   margin-top: 5px; 
-  color: red
 }
