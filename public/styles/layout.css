@@ -32,9 +32,10 @@ body {
 main {
   width: 90%;
   margin: 0 auto;
+  background-color: inherit;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 

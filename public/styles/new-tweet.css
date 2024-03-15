@@ -1,0 +1,49 @@
+.newer-tweet {
+  width: 70%;
+  background-color: #f5f8fa; 
+  border: 2px solid #e1e8ed; 
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.newer-tweet h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* .tweeter-post {
+  display: flex;
+  flex-direction: column;
+} */
+
+.tweeter-post textarea {
+  width: 100%;
+  background-color: #f5f8fa;
+  padding: 5px 0; 
+  border: none;
+  border-bottom: 3px solid black; 
+  margin-bottom: 10px;
+  resize: none;
+}
+
+.tweeter-post button {
+  background-color: #4056A1;
+  font-family: "Bungee", sans-serif;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tweet-counter {
+  display: flex;
+  justify-content:space-between
+
+}
+
+.counter {
+  color: black;
+  font-family: "Bungee", sans-serif;
+}
