@@ -39,11 +39,14 @@
 
 .tweet-counter {
   display: flex;
-  justify-content:space-between
-
+  justify-content:space-between;
 }
 
 .counter {
   color: black;
   font-family: "Bungee", sans-serif;
+}
+
+.exceeded {
+  color: red
 }
