@@ -13,7 +13,3 @@ $(document).ready(function () {
 });
 
 });
-
-
-
-
