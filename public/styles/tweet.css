@@ -1,5 +1,5 @@
 .tweet-log {
-  width: 70%;
+  width: 100%;
 }
 
 .tweet {
@@ -49,5 +49,6 @@ font-weight: 350;
 }
 
 .actions button:hover {
-  color: #4056A1; /* Change background color on hover */
+  color: #4056A1; 
 }
+
