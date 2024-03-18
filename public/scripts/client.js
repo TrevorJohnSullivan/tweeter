@@ -59,7 +59,7 @@ $(document).ready(function () {
 
   const renderTweets = function (tweets) {
     for (let i of tweets) {
-      $('.tweet-log').append(createTweetElement(i));
+      $('.tweet-log').prepend(createTweetElement(i));
     }
   };
   renderTweets(data);
