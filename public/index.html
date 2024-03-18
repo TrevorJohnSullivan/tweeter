@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -55,6 +56,7 @@
 
 
   <main class="container">
+
     <section class="newer-tweet">
       <h2>Compose <i>tweet</i></h2>
       <form class="tweeter-post" action="/tweets" method="POST">
@@ -66,9 +68,47 @@
         </div>
       </form>
     </section>
+
+
+
+
+
+
+    <section class="tweet-log">
+      <article class="tweet">
+        <div class="user-info">
+          <div class="name-avatar">
+            <img src="/images/Newton.png">
+            <h3>Newton</h3>
+          </div>
+          <span>@SirIsaac</span>
+        </div>
+        <div class="tweet-body">
+          <p>If I have seen further, it is by standing on the shoulders of giants.</p>
+        </div>
+        <div class="tweet-info">
+          <span><i>10 days ago</i></span>
+          <div class="actions">
+            <button><i class="fa-solid fa-flag"></i></button>
+            <button><i class="fa-solid fa-retweet"></i></button>
+            <button><i class="fa-solid fa-heart"></i></button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+
+
+
+
+
   </main>
 
 
 </body>
+
 </html>
 
+<!-- <section class="tweet-log"> 
+
+</section> -->

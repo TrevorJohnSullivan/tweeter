@@ -4,6 +4,7 @@
   border: 2px solid #e1e8ed; 
   padding: 25px;
   border-radius: 8px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -11,11 +12,6 @@
   font-size: 18px;
   margin-bottom: 10px;
 }
-
-/* .tweeter-post {
-  display: flex;
-  flex-direction: column;
-} */
 
 .tweeter-post textarea {
   width: 100%;
