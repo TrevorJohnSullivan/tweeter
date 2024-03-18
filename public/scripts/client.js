@@ -62,6 +62,16 @@ $(document).ready(function () {
       $('.tweet-log').prepend(createTweetElement(i));
     }
   };
+
   renderTweets(data);
 
+  $('.tweeter-post').submit(function (event) {
+    event.preventDefault();
+    const serializedData = $(this).serialize();
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: serializedData
+    });
+  });
 });
