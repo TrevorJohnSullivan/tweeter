@@ -49,6 +49,15 @@ $(document).ready(function () {
 
   $('.tweeter-post').submit(function (event) {
     event.preventDefault();
+    const tweetContent = $('#tweet-text').val().trim();
+    if (!tweetContent) {
+      alert('Cannot send an empty Tweet.'); 
+      return;
+    }
+    if (tweetContent.length > 140) {
+      alert('Tweet is too long. Maximum 140 characters allowed.');
+      return;
+    }
     const serializedData = $(this).serialize();
     $.ajax({
       url: '/tweets',
