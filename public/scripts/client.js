@@ -16,7 +16,7 @@ $(document).ready(function () {
                     <p>${content.text}</p>
                 </div>
                 <div class="tweet-info">
-                    <span><i>${created_at}</i></span>
+                    <span><i>${timeago.format(created_at)}</i></span>
                     <div class="actions">
                         <button><i class="fa-solid fa-flag"></i></button>
                         <button><i class="fa-solid fa-retweet"></i></button>
@@ -57,13 +57,28 @@ $(document).ready(function () {
   ];
   // End of test/driver code
 
+
+  const loadTweets = function () {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+      dataType: 'json',
+      success: function (data) {
+        renderTweets(data);
+      },
+    });
+  };
+
+  
+
   const renderTweets = function (tweets) {
     for (let i of tweets) {
       $('.tweet-log').prepend(createTweetElement(i));
     }
   };
 
-  renderTweets(data);
+  loadTweets();
+  // renderTweets(data);
 
   $('.tweeter-post').submit(function (event) {
     event.preventDefault();
@@ -74,4 +89,5 @@ $(document).ready(function () {
       data: serializedData
     });
   });
+
 });
