@@ -28,36 +28,6 @@ $(document).ready(function () {
     return markUp;
   };
 
-
-  // Test / driver code (temporary). Eventually will get this from the server.
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
-  // End of test/driver code
-
-
   const loadTweets = function () {
     $.ajax({
       url: '/tweets',
@@ -69,8 +39,6 @@ $(document).ready(function () {
     });
   };
 
-  
-
   const renderTweets = function (tweets) {
     for (let i of tweets) {
       $('.tweet-log').prepend(createTweetElement(i));
@@ -78,7 +46,6 @@ $(document).ready(function () {
   };
 
   loadTweets();
-  // renderTweets(data);
 
   $('.tweeter-post').submit(function (event) {
     event.preventDefault();
@@ -86,7 +53,12 @@ $(document).ready(function () {
     $.ajax({
       url: '/tweets',
       method: 'POST',
-      data: serializedData
+      data: serializedData,
+      success: function () {
+        $('#tweet-text').val('');
+        $('.counter').text('140');
+        loadTweets();
+      },
     });
   });
 
