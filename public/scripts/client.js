@@ -1,30 +1,36 @@
 $(document).ready(function () {
   console.log("Document is ready!");
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function (data) {
     const { user, content, created_at } = data;
     const markUp = `
-            <article class="tweet">
-                <div class="user-info">
-                    <div class="name-avatar">
-                        <img src="${user.avatars}">
-                        <h3>${user.name}</h3>
-                    </div>
-                    <span>${user.handle}</span>
-                </div>
-                <div class="tweet-body">
-                    <p>${content.text}</p>
-                </div>
-                <div class="tweet-info">
-                    <span><i>${timeago.format(created_at)}</i></span>
-                    <div class="actions">
-                        <button><i class="fa-solid fa-flag"></i></button>
-                        <button><i class="fa-solid fa-retweet"></i></button>
-                        <button><i class="fa-solid fa-heart"></i></button>
-                    </div>
-                </div>
-            </article>
-    `;
+    <article class="tweet">
+      <div class="user-info">
+        <div class="name-avatar">
+          <img src="${escape(user.avatars)}">
+          <h3>${escape(user.name)}</h3>
+        </div>
+        <span>${escape(user.handle)}</span>
+      </div>
+      <div class="tweet-body">
+        <p>${escape(content.text)}</p>
+      </div>
+      <div class="tweet-info">
+        <span><i>${escape(timeago.format(created_at))}</i></span>
+        <div class="actions">
+          <button><i class="fa-solid fa-flag"></i></button>
+          <button><i class="fa-solid fa-retweet"></i></button>
+          <button><i class="fa-solid fa-heart"></i></button>
+        </div>
+      </div>
+    </article>
+  `;
     return markUp;
   };
 
@@ -51,7 +57,7 @@ $(document).ready(function () {
     event.preventDefault();
     const tweetContent = $('#tweet-text').val().trim();
     if (!tweetContent) {
-      alert('Cannot send an empty Tweet.'); 
+      alert('Cannot send an empty Tweet.');
       return;
     }
     if (tweetContent.length > 140) {
