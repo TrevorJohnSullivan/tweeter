@@ -39,8 +39,9 @@ $(document).ready(function () {
       url: '/tweets',
       method: 'GET',
       dataType: 'json',
-      success: function (data) {
-        renderTweets(data);
+      success: function (tweets) {
+        $('.tweet-log').empty();
+        renderTweets(tweets);
       },
     });
   };
@@ -56,14 +57,18 @@ $(document).ready(function () {
   $('.tweeter-post').submit(function (event) {
     event.preventDefault();
     const tweetContent = $('#tweet-text').val().trim();
+    
     if (!tweetContent) {
-      alert('Cannot send an empty Tweet.');
+      $('.error-message').text('⚠️ Cannot send an empty Tweet. ⚠️').slideDown();
       return;
     }
     if (tweetContent.length > 140) {
-      alert('Tweet is too long. Maximum 140 characters allowed.');
+      $('.error-message').text('⚠️ Tweet is too long. Maximum 140 characters allowed. ⚠️').slideDown();
       return;
     }
+    $('.error-message').slideUp();
+  
+
     const serializedData = $(this).serialize();
     $.ajax({
       url: '/tweets',
