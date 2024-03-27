@@ -20,14 +20,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
+<b>Mobile Version</b>
 !["Mobile Version"](https://github.com/TrevorJohnSullivan/tweeter/blob/master/docs/mobilecap.png)
 
-
-
-
+<b>Desktop Version</b>
 !["Desktop Version"](https://github.com/TrevorJohnSullivan/tweeter/blob/master/docs/desktopcap.png)
 
-
-
-
+<b>Error Showing</b>
 !["Error Showing"](https://github.com/TrevorJohnSullivan/tweeter/blob/master/docs/errorcap.png)
