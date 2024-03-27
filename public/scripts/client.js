@@ -57,7 +57,6 @@ $(document).ready(function () {
   $('.tweeter-post').submit(function (event) {
     event.preventDefault();
     const tweetContent = $('#tweet-text').val().trim();
-    
     if (!tweetContent) {
       $('.error-message').text('⚠️ Cannot send an empty Tweet. ⚠️').slideDown();
       return;
@@ -66,9 +65,7 @@ $(document).ready(function () {
       $('.error-message').text('⚠️ Tweet is too long. Maximum 140 characters allowed. ⚠️').slideDown();
       return;
     }
-    $('.error-message').slideUp();
-  
-
+    $('.error-message').slideUp(500);
     const serializedData = $(this).serialize();
     $.ajax({
       url: '/tweets',
