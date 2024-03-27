@@ -38,3 +38,14 @@ main {
   align-items: center;
 }
 
+/* 
+@media only screen and (min-width: 768px) {
+
+  main {
+    width: 50%;
+    margin-top: 205px;
+    margin-right: 50px;
+    float: right;
+    
+  }
+} */

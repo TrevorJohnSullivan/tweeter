@@ -2,7 +2,10 @@ nav {
   position: fixed;
   height: 120px;
   width: 100%; 
-  background-color: #4056A1; 
+  background-image: url("/images/black-felt.png");
+  /* background-size: cover; */
+  background-position: center; 
+  background-color:#e09d4a;
   color: #FFFFFF; 
   display: flex;
   justify-content: space-between;
@@ -24,3 +27,21 @@ nav {
 .icon {
   margin-top: 5px; 
 }
+
+
+/* @media only screen and (min-width: 768px) {
+
+  nav {
+    position: fixed;
+    height: 120px;
+    width: 100%; 
+    background-image: none;
+    background-color: #4056A1; 
+    color: #FFFFFF; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5em; 
+  }
+
+} */

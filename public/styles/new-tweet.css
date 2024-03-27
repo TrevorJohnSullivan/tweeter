@@ -1,7 +1,5 @@
 .newer-tweet {
   width: 100%;
-  background-color: #f5f8fa; 
-  border: 2px solid #e1e8ed; 
   padding: 25px;
   border-radius: 8px;
   margin-top: 20px;
@@ -15,7 +13,7 @@
 
 .tweeter-post textarea {
   width: 100%;
-  background-color: #f5f8fa;
+  background-color: #f4f1ec;
   padding: 5px 0; 
   border: none;
   border-bottom: 3px solid black; 
