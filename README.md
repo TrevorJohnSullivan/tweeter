@@ -16,3 +16,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+
+## Screenshots
+
+![Mobile Version](https://github.com/TrevorJohnSullivan/tweeter/blob/master/docs/mobilecap.png)
+![Desktop Version](https://github.com/TrevorJohnSullivan/tweeter/blob/master/docs/desktopcap.png)
+![Error Showing](https://github.com/TrevorJohnSullivan/tweeter/blob/master/docs/errorcap.png)
