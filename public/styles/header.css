@@ -31,26 +31,4 @@ header {
     height: auto; 
   } 
 
-
-  main {
-    width: 50%;
-    margin-top: 205px;
-    margin-right: 50px;
-    float: right;
-    
-  }
-
-  nav {
-    position: fixed;
-    height: 120px;
-    width: 100%; 
-    background-image: none;
-    background-color: #4056A1; 
-    color: #FFFFFF; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1.5em; 
-  }
-
 }

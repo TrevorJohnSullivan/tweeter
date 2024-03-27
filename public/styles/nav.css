@@ -28,8 +28,7 @@ nav {
   margin-top: 5px; 
 }
 
-
-/* @media only screen and (min-width: 768px) {
+ @media only screen and (min-width: 768px) {
 
   nav {
     position: fixed;
@@ -44,4 +43,4 @@ nav {
     padding: 0 1.5em; 
   }
 
-} */
+} 
